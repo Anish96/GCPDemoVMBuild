@@ -6,7 +6,7 @@ provider "google" {
   zone    = "us-central1-a"
 }
 
-resource "google_compute_instance" "VM Instance" {
+resource "google_compute_instance" "vminstance" {
   name = "secondary-application-server"
   machine_type = "f1-micro"
 
