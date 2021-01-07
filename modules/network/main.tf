@@ -1,11 +1,11 @@
----- Create cutom Netwrok ---
+#---- Create cutom Netwrok ---
 
 resource "google_compute_network" "custom-test" {
   name                    = "test-network"
   auto_create_subnetworks = false
 }
 
----- create custom 2 sub-network ------
+#---- create custom 2 sub-network ------
 
 resource "google_compute_subnetwork" "custom-subnetwork" {
   name          = "test-subnetwork1"
@@ -28,7 +28,7 @@ resource "google_compute_subnetwork" "custom-subnetwork2" {
   }
   }
 
----- Create firewall ---
+#---- Create firewall ---
 
 resource "google_compute_firewall" "custom-firewall" {
   name    = "test-firewall"
@@ -46,7 +46,7 @@ resource "google_compute_firewall" "custom-firewall" {
   source_tags = ["web"]
 }
 
------Create Compute Engine -----
+#-----Create Compute Engine -----
 
 resource "google_compute_instance" "vminstance2" {
   name = "second-application-server"
@@ -68,7 +68,7 @@ resource "google_compute_instance" "vminstance2" {
 }
 
 
---- Create additonal disk ---
+#--- Create additonal disk ---
 
 resource "google_compute_disk" "default" {
   name  = "test-disk"
@@ -81,7 +81,7 @@ resource "google_compute_disk" "default" {
   physical_block_size_bytes = 4096
 }
 
----- attach disk to comput engine ----
+#---- attach disk to comput engine ----
 
 resource "google_compute_attached_disk" "default" {
   disk     = google_compute_disk.default.id
