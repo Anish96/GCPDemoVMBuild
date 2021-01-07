@@ -14,6 +14,6 @@ resource "google_compute_instance" "vminstance2" {
    }
 }
  network_interface {
-   network = google_compute_network.custom-test.id
+   network = test.network
  }
 }
