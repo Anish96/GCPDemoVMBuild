@@ -13,7 +13,7 @@ resource "google_compute_subnetwork" "custom-subnetwork" {
     ip_cidr_range = "192.168.10.0/24"
   }
     }
-resource "google_compute_subnetwork" "custom-subnetwork" {
+resource "google_compute_subnetwork" "custom-subnetwork2" {
   name          = "test-subnetwork2"
   ip_cidr_range = "10.2.0.0/16"
   region        = "us-central1"
