@@ -9,9 +9,9 @@ subnets = {
             subnet_flow_logs      = "true"
             description           = "This subnet has a description"   
 }
-            #routes = {
+            route = {
         {
-            name                   = "egress-internet"
+            name                 = "egress-internet"
             description            = "route through IGW to access internet"
             destination_range      = "0.0.0.0/0"
             tags                   = "egress-inet"
