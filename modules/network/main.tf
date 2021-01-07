@@ -3,8 +3,7 @@ resource "google_compute_network" "custom-test" {
   auto_create_subnetworks = false
 }
 
-resource "google_compute_subnetwork" "custom-subnetwork"
-    {
+resource "google_compute_subnetwork" "custom-subnetwork" {
   name          = "test-subnetwork1"
   ip_cidr_range = "10.2.0.0/16"
   region        = "us-central1"
@@ -14,8 +13,7 @@ resource "google_compute_subnetwork" "custom-subnetwork"
     ip_cidr_range = "192.168.10.0/24"
   }
     }
-resource "google_compute_subnetwork" "custom-subnetwork"
-  {
+resource "google_compute_subnetwork" "custom-subnetwork" {
   name          = "test-subnetwork2"
   ip_cidr_range = "10.2.0.0/16"
   region        = "us-central1"
