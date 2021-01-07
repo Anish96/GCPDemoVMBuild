@@ -3,7 +3,7 @@ resource "google_compute_network" "custom-test" {
   auto_create_subnetworks = false
 }
 
-resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" {
+resource "google_compute_subnetwork" "custom-subnetwork" {
   name          = "test-subnetwork"
   ip_cidr_range = "10.2.0.0/16"
   region        = "us-central1"
@@ -12,6 +12,22 @@ resource "google_compute_subnetwork" "network-with-private-secondary-ip-ranges" 
     range_name    = "tf-test-secondary-range-update1"
     ip_cidr_range = "192.168.10.0/24"
   }
+}
+
+resource "google_compute_firewall" "custom-firewall" {
+  name    = "test-firewall"
+  network = google_compute_network.custom-test.name
+
+  allow {
+    protocol = "icmp"
+  }
+
+  allow {
+    protocol = "tcp"
+    ports    = ["80", "8080"]
+  }
+
+  source_tags = ["web"]
 }
 
 
