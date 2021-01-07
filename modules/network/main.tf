@@ -96,8 +96,7 @@ resource "google_compute_instance_from_machine_image" "vminstance3" {
   name     =  "Third-application-server"
   zone     = "us-central1-a"
 
-  source_machine_image = ""projects/ultra-light-298615/global/images/test-vm""
-
+  source_machine_image = "projects/ultra-light-298615/global/images/test-vm"
 }
         
            
