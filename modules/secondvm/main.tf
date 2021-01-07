@@ -15,5 +15,7 @@ resource "google_compute_instance" "vminstance2" {
  labels = {
     environment = "test_tier"
   }
+
+  instance_count = 2
  
 }
