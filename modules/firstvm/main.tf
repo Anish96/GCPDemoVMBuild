@@ -13,7 +13,7 @@ resource "google_compute_instance" "vminstance" {
 }
 
 resource "google_compute_instance" "vminstance2" {
-  name = "first-application-server"
+  name = "second-application-server"
   machine_type = "f1-micro"
 
   boot_disk {
