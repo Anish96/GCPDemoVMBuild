@@ -62,7 +62,9 @@ resource "google_compute_instance" "vminstance2" {
    subnetwork = google_compute_subnetwork.custom-subnetwork2.name
  }
 
- labels = test_tier
+ labels = {
+    environment = "test_tier"
+  }
  
 }
 
