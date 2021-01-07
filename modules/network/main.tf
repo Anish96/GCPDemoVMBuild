@@ -16,7 +16,7 @@ resource "google_compute_subnetwork" "custom-subnetwork" {
 
 resource "google_compute_firewall" "custom-firewall" {
   name    = "test-firewall"
-  network = google_compute_network.defaultcustom-test.name
+  network = google_compute_network.custom-test.name
 
   allow {
     protocol = "icmp"
