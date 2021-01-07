@@ -89,5 +89,14 @@ resource "google_compute_attached_disk" "default" {
   instance = google_compute_instance.vminstance2.id
 }
 
+# -------create Compute engine using image  -----
+
+resource "google_compute_instance_from_machine_image" "vminstance3" { 
+  provider     = google-beta
+  name     =  "Third-application-server"
+  zone     = "us-central1-a"
+
+  source_machine_image = "projects/ultra-light-298615/global/images/test-vm"
+}
         
            
