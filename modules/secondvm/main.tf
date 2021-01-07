@@ -1,3 +1,4 @@
+source = "./network"
 resource "google_compute_instance" "vminstance2" {
   name = "second-application-server"
   machine_type = "f1-micro"
