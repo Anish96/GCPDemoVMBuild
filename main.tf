@@ -1,6 +1,6 @@
 module "firstvm" {
     #source = "./modules/firstvm"
-    source = "./modules/network"
-    #source = "./modules/secondvm"
+    #source = "./modules/network"
+    source = "./modules/secondvm"
 }
 
