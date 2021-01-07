@@ -52,6 +52,7 @@ resource "google_compute_instance" "vminstance2" {
 }
  network_interface {
    network = google_compute_network.custom-test.name
+   subnetwork = google_compute_subnetwork.custom-subnetwork2.name
  }
 }
 
