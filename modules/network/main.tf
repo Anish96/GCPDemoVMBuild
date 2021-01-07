@@ -91,8 +91,7 @@ resource "google_compute_attached_disk" "default" {
 
 # -------create Compute engine using image  -----
 
-resource "google_compute_instance_from_machine_image" "vminstance3" {
-  provider = google-beta
+resource "google_compute_instance_from_machine_image" "vminstance3" { 
   name     =  Third-application-server
   zone     = "us-central1-a"
 
