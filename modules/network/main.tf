@@ -67,5 +67,10 @@ resource "google_compute_disk" "default" {
   physical_block_size_bytes = 4096
 }
 
+resource "google_compute_attached_disk" "default" {
+  disk     = google_compute_disk.default.id
+  instance = google_compute_instance.vminstance2.id
+}
+
         
            
