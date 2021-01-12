@@ -1,7 +1,12 @@
 resource "google_compute_instance" "vminstance2" {
-  name = "second-application-server"
+  # name = "second-application-server"
+  count = 2
   machine_type = "f1-micro"
 
+tags = {
+name ="gcp8286saq${count.index}"
+  
+}
   boot_disk {
    initialize_params {
      image = "debian-cloud/debian-9"
@@ -16,6 +21,4 @@ resource "google_compute_instance" "vminstance2" {
     environment = "test_tier"
   }
 
-  instance_count = 2
- 
-}
+  }
