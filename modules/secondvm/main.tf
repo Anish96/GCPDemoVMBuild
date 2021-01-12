@@ -12,9 +12,9 @@ name ="server${count.index}"
 }
  network_interface {
   # network = google_compute_network.custom-test.name
-  network = test-network
+  network = "test-network"
   # subnetwork = google_compute_subnetwork.custom-subnetwork2.name
-  subnetwork = test-subnetwork2
+  subnetwork = "test-subnetwork2"
  }
 
  labels = {
