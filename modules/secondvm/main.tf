@@ -13,9 +13,9 @@ name ="gcp8286saq${count.index}"
    }
 }
  #network_interface {
-   network = google_compute_network.custom-test.name
-   subnetwork = google_compute_subnetwork.custom-subnetwork2.name
- }
+  # network = google_compute_network.custom-test.name
+  # subnetwork = google_compute_subnetwork.custom-subnetwork2.name
+ #}
 
  labels = {
     environment = "test_tier"
