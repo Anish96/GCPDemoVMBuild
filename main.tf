@@ -3,9 +3,8 @@ module "vmbuild" {
     source = "./modules/secondvm"
 }
 
-module "network" {
-    source = "./modules/network"
-    
-}
+# module "network" {
+ #  source = "./modules/network"    
+# }
 
 
