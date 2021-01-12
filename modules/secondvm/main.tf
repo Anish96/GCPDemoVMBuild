@@ -4,7 +4,7 @@ resource "google_compute_instance" "vminstance2" {
   machine_type = "f1-micro"
 
 tags = {
-name ="gcp8286saq${count.index}"
+name ="server ${count.index}"
   
 }
   boot_disk {
