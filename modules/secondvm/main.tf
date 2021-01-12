@@ -3,10 +3,8 @@ resource "google_compute_instance" "vminstance2" {
   count = 2
   machine_type = "f1-micro"
 
-tags = {
-name ="server ${count.index}"
+name ="server${count.index}"
   
-}
   boot_disk {
    initialize_params {
      image = "debian-cloud/debian-9"
